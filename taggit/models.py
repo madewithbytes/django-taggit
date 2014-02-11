@@ -13,6 +13,7 @@ from django.utils.encoding import python_2_unicode_compatible
 class TagBase(models.Model):
     name = models.CharField(verbose_name=_('Name'), unique=True, max_length=100)
     slug = models.SlugField(verbose_name=_('Slug'), unique=True, max_length=100)
+    is_featured = models.BooleanField(verbose_name=_('Is featured?'), default=False)
 
     def __str__(self):
         return self.name
