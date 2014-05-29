@@ -46,10 +46,7 @@ def edit_string_for_tags(tags):
     names = []
     for tag in tags:
         name = tag.name
-        if ',' in name or ' ' in name:
-            names.append('"%s"' % name)
-        else:
-            names.append(name)
+        names.append(name)
     return ', '.join(sorted(names))
 
 
